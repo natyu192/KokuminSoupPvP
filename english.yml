@@ -1,0 +1,86 @@
+bar: "&6&l------------------------------"
+space: ""
+cooldown: "&cYou have a cooldown for %cooldown seconds."
+not-enough-coin: "&6%coin &cmore coins needed!"
+coming-soon: "&6Coming soon!"
+arena-fight:
+  duel:
+    send: "&eYou requested %target to 1vs1!"
+    receive: "&e%sender has requested you to 1vs1!"
+    click-here: "&d&n[Click here]"
+    to-accept: "&eto accept and start game."
+    accepted: "&aAccepted duel request by %sender!"
+    was-accepted: "&a%accepter accepted your duel request!"
+  match:
+    starting-in: "&eThe match is starting in &6%count &e seconds..."
+    started: "&aThe match has started!"
+    ended: "&e&lThe match has ended!"
+    no-arena: "&cThere are no available arena."
+    opponent-found: "&aOpponent found: %opponent"
+  spectate:
+    watch-your-own-game: "&aYou should watch your own match!"
+command:
+  error:
+    player-not-found: "&6%player &cis currently offline."
+    cannot-do-while-in-party: "&cYou cannot do that while in a party."
+    must-be-in-party: "&cYou must be in a party to do that."
+    can-do-in-lobby: "&cYou can do that only in lobby."
+    can-do-in-lobby-or-ffa: "&cYou can do that in lobby or FFA."
+    target-must-be-in-lobby: "&6%target &c must be in lobby."
+    target-must-not-be-in-party: "&6%target &c must not be in a party."
+    combat-tagged: "&cYou are tagged for %tag seconds."
+    target-not-in-match: "&6%target &cis not in a match."
+  duel:
+    cannot-duel-yourself: "&cYou cannot send duel request yourself."
+    already-pending-duel: "&cYou have already pending a duel request to &6%target&c!"
+    usage: "&cUsage: /duel <player> --- &6Send a 1vs1 duel request."
+  accept:
+    no-duel-request: "&cYou have no duel request from &6%target&c."
+    usage: "&cUsage: /accept <player> --- &6Accept a 1vs1 duel request."
+  nick:
+    length-error: "&cThe nickname must be longer than 4 characters and shorter than 16 characters."
+    name-is-already-used: "&6%name &cis already used."
+    not-nicked: "&cYou are not nicked."
+  spectate:
+    cannot-spec-yourself: "&cYou cannot be spectating yourself."
+    usage: "&cUsage: /spec <player> --- &6Spectate a player in Arena Fight."
+  language:
+    usage: "&cUsage: /language <language> --- &6Sets your language."
+    set: "Current Language: %language"
+kit:
+  gui:
+    unable-kit: "&c%kit Kit is currently disabled."
+    go-ffa-first: "&6Join FFA first!!"
+    kit-selected: "&a%kit Kit selected."
+    kit-could-not-select: "&cError: You couldn't select %kit Kit."
+    purchasing-kit: "Purchasing %kit Kit"
+    kit-unlock-broadcast: "%player &bhas just unlocked &d%kit Kit&b."
+  sumo-wrestler:
+    only-fists: "&cYou can damage only with your fists on this kit!"
+combat:
+  be-killed: "&c%victim &7was killed by &c%killer&7."
+  died: "&c%victim &7died."
+ffa:
+  select-kit-to-get-out: "&cYou cannot get in ffa without selecting kit."
+  build-limit: "&cBuilding is limitted at Y%limit blocks high."
+  daily-soup-completed: "&bYour Daily Soup XP has been completed!"
+  earn-resource: "&aYou gathered &d%amount&a of &d%resource&a!"
+party-gui:
+  random-team: "&aCreated teams randomly!"
+  member-size-error: "&cBoth team must have at least 1 player."
+  error-occured: "&cError occured. Please try again. Code: %code"
+  invalid-team: "&cInvalid teams! Please try again."
+  only-leader-can-do: "&cOnly the party leader can start the Team Fight."
+perk:
+  gui:
+    is-maxed: "&aThis perk level is MAXED!"
+    upgrading-perk: "Upgrading %perk"
+    max-unlocked: "%player &ehas level maxed &d%perk &b!!"
+queue:
+  remove: "&7You have been removed from queue."
+  join: "&7You have been queued on 1vs1."
+  remove-for-being-in-party: "&7You have been removed from queue for being in party."
+lava-challenge:
+  succeed: "&aYou have just completed the &cLava Challenge&a!"
+  succeed-broadcast: "&d%player &ahas just completed the &cLava Challenge&a!"
+  addcoin-message: "Completing the Lava Challenge"

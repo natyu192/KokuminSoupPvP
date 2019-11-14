@@ -1,0 +1,86 @@
+bar: "&6&l------------------------------"
+space: ""
+cooldown: "&c%cooldown秒後に再度実行可能です"
+not-enough-coin: "&6%coin &cコイン足りません！"
+coming-soon: "&6お楽しみに！"
+arena-fight:
+  duel:
+    send: "&e%target へ1vs1を申し込みました！"
+    receive: "&e%sender から1vs1を申し込まれました！"
+    click-here: "&d&n[こちらをクリック]"
+    to-accept: "&eすると挑戦を受け、ゲームを始めます"
+    accepted: "&a%sender からのDuelを受けました！"
+    was-accepted: "&a%accepter があなたからのDuelを受けました！"
+  match:
+    starting-in: "&eゲームが始まるまで &6%count &e秒..."
+    started: "&aゲーム開始！"
+    ended: "&e&lゲーム終了！"
+    no-arena: "&c遊ぶことのできるアリーナが見つかりませんでした"
+    opponent-found: "&a対戦相手が見つかりました！ 相手: %opponent"
+  spectate:
+    watch-your-own-game: "&a自分のゲームは観戦しましょう！"
+command:
+  error:
+    player-not-found: "&6%player &cというプレイヤーはオフラインです"
+    cannot-do-while-in-party: "&cパーティに入っている間は使用できません"
+    must-be-in-party: "&cパーティに入っていなければ使用できません"
+    can-do-in-lobby: "&cロビーでのみ実行可能です"
+    can-do-in-lobby-or-ffa: "&cロビー、FFAでのみ実行可能です"
+    target-must-be-in-lobby: "&6%target &cはロビーにいなければなりません"
+    target-must-not-be-in-party: "&6%target &cはパーティから抜けていなければなりません"
+    combat-tagged: "&cあなたにはCombatTagがついています &7(残り%tag秒)"
+    target-not-in-match: "&6%target &cはゲーム中ではありません"
+  duel:
+    cannot-duel-yourself: "&c自分自身へ1vs1を申し込むことはできません"
+    already-pending-duel: "&cあなたは既に &6%target &cへ1vs1を申し込んでいます！"
+    usage: "&c使い方: /duel <player> --- &61vs1を申し込みます"
+  accept:
+    no-duel-request: "&6%target から1vs1の申し込みを受けていません"
+    usage: "&c使い方: /accept <player> --- &61vs1を受けます"
+  nick:
+    length-error: "&cニックネームは4文字以上、16文字以内のIDでなければなりません"
+    name-is-already-used: "&6%name &cというニックネームは既に使用されています"
+    not-nicked: "§cNickを使用していません"
+  spectate:
+    cannot-spec-yourself: "&c自分自身のゲームを観戦することはできません"
+    usage: "&c使い方: /spec <player> --- &6Arena Fightにいるプレイヤーを観戦します"
+  language:
+    usage: "&c使い方: /language <言語> --- &6言語を設定します"
+    set: "現在の言語: %language"
+kit:
+  gui:
+    unable-kit: "&c現在 %kit Kit は使用できません(調整中など)"
+    go-ffa-first: "&6まずはFFAに行きましょう！"
+    kit-selected: "&a%kit Kit を選択しました"
+    kit-could-not-select: "&cエラー: %kit Kit を選択することができませんでした"
+    purchasing-kit: "%kit Kit の購入"
+    kit-unlock-broadcast: "%player &bが &d%kit Kit &bをアンロックした！"
+  sumo-wrestler:
+    only-fists: "&cこのキットでは素手でのみダメージが与えられます！"
+combat:
+  be-killed: "&c%victim&7は&c%killer&7に倒された"
+  died: "&c%victim&7は死んでしまった"
+ffa:
+  select-kit-to-get-out: "&cキットを選ばなければFFAに出ることはできません"
+  build-limit: "&cブロックは Y%limit までに制限されています"
+  daily-soup-completed: "&bデイリースープXPが満タンになりました！"
+  earn-resource: "&d%resource&aを&d%amount&a個回収した！"
+party-gui:
+  random-team: "&aランダムでチーム分けしました"
+  member-size-error: "&c両方のチームには１人以上いる必要があります"
+  error-occured: "&cエラーが発生したためやり直してください: %code"
+  invalid-team: "&c不正なチームのためやり直してください"
+  only-leader-can-do: "&cパーティのリーダーのみParty Fightを始めることができます"
+perk:
+  gui:
+    is-maxed: "&aこのPerkのレベルは最大です！"
+    upgrading-perk: "%perk のアップグレード"
+    max-unlocked: "%player &eが &d%perk &bの最大レベルをアンロックした！"
+queue:
+  remove: "&7キューから抜けました"
+  join: "&7キューに入りました。対戦相手が見つかるまでしばらくお待ちください..."
+  remove-for-being-in-party: "&7Partyに入ったためキューから抜けました"
+lava-challenge:
+  succeed: "&cLava Challenge&aをクリアした！"
+  succeed-broadcast: "&d%player &aが &cLava Challenge &aをクリアした！"
+  addcoin-message: "Lava Challenge に成功"

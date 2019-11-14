@@ -1,0 +1,55 @@
+name: KokuminSoupPvP
+version: 1.0
+main: me.nucha.souppvp.SoupPvPPlugin
+depend: [KokuminCore, KokuminServer, WorldEdit, WorldGuard, WGRegionEvents, KokuminParties]
+commands:
+  soup:
+    description: Gives you a lot of soup.
+    permission: souppvp.soup
+  kits:
+    description: Shows you a list of kits.
+    permission: souppvp.kits
+  kit:
+    description: Manages kits.
+    permission: souppvp.kit
+  souppvp:
+    description: Manages locations and fine settings.
+    permission: souppvp.souppvp
+    aliases: [spvp]
+  spawn:
+    description: Teleports yourself or a player to the spawn.
+    permission: souppvp.spawn
+    aliases: [hub, lobby, l]
+  nick:
+    description: Hide yourself from targetters!
+    permission: souppvp.nick.random
+  unnick:
+    description: Get not nicked.
+    permission: souppvp.nick.random
+  nicklist:
+    description: Shows a list of a nickname and a player who uses that nickname.
+    permission: souppvp.nicklist
+  arenas:
+    description: Shows you a list of arenas.
+    permission: souppvp.arenas
+  arena:
+    description: Manages arenas.
+    permission: souppvp.arena
+  spectate:
+    description: Lets you spectate an Arena Fight.
+    aliases: [spec]
+  duel:
+    description: Sents someone a duel request.
+  accept:
+    description: Accepts a duel request.
+  resource:
+    description: Gives you the Resource Manager item.
+    permission: souppvp.resource
+  lastinventory:
+    description: Shows you a player's inventory on the last match.
+  language:
+    description: Sets your language.
+    aliases: [lang]
+  lavachallengesucceed:
+    description: Gives a player the reward for completing Lava Challenge.
+    permission: souppvp.lavachallengesucceed
