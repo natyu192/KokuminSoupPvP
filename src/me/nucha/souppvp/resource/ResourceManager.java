@@ -158,7 +158,7 @@ public class ResourceManager {
 			int amount = random.nextInt(amountMax - amountMin) + amountMin;
 			p.getInventory().addItem(new ItemStack(resourceType, amount));
 			p.sendMessage("§8[§aFFA§8] §r" + LanguageManager.get(p, "ffa.earn-resource")
-					.replaceAll("%resource", resourceName).replaceAll("amount", String.valueOf(amount)));
+					.replaceAll("%resource", resourceName).replaceAll("%amount", String.valueOf(amount)));
 			b.setType(Material.AIR);
 			BukkitRunnable taskSound = new BukkitRunnable() {
 				int i = amount;
