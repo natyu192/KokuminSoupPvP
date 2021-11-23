@@ -1,8 +1,10 @@
 package me.nucha.souppvp.arenafight.match;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 
 import com.google.common.collect.Lists;
@@ -33,8 +35,14 @@ public class TeamInfo {
 		return team2;
 	}
 
-	public void randomize() {
-		List<Player> members = Lists.newArrayList(party.getMembers());
+	public boolean randomize() {
+		List<Player> members = new ArrayList<>();
+		for (OfflinePlayer member : party.getMembers()) {
+			if (!member.isOnline()) {
+				return false;
+			}
+			members.add(member.getPlayer());
+		}
 		Collections.shuffle(members);
 		List<Player> team1 = Lists.newArrayList();
 		List<Player> team2 = Lists.newArrayList();
@@ -47,6 +55,7 @@ public class TeamInfo {
 		}
 		this.team1 = team1;
 		this.team2 = team2;
+		return true;
 	}
 
 }

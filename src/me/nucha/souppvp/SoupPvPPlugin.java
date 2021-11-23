@@ -49,11 +49,11 @@ import me.nucha.souppvp.player.PlayerUtil;
 import me.nucha.souppvp.resource.ResourceListener;
 import me.nucha.souppvp.resource.ResourceManager;
 import me.nucha.souppvp.util.ConfigUtil;
+import me.nucha.souppvp.util.CooldownUtil;
 import me.nucha.souppvp.util.ItemUtil;
 import me.nucha.souppvp.util.LocationUtil;
 import me.nucha.souppvp.util.PlayerDataUtil;
 import me.nucha.souppvp.util.ScoreboardUtils;
-import me.nucha.souppvp.util.cooldown.CooldownUtil;
 
 public class SoupPvPPlugin extends JavaPlugin {
 

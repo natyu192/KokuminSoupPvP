@@ -12,7 +12,7 @@ arena-fight:
     accepted: "&aAccepted duel request by %sender!"
     was-accepted: "&a%accepter accepted your duel request!"
   match:
-    starting-in: "&eThe match is starting in &6%count &e seconds..."
+    starting-in: "&eThe match is starting in &6%count &eseconds..."
     started: "&aThe match has started!"
     ended: "&e&lThe match has ended!"
     no-arena: "&cThere are no available arena."
@@ -28,7 +28,7 @@ command:
     can-do-in-lobby-or-ffa: "&cYou can do that in lobby or FFA."
     target-must-be-in-lobby: "&6%target &c must be in lobby."
     target-must-not-be-in-party: "&6%target &c must not be in a party."
-    combat-tagged: "&cYou are tagged for %tag seconds."
+    combat-tagged: "&cYou are Combat Tagged for &6%tag &cseconds."
     target-not-in-match: "&6%target &cis not in a match."
   duel:
     cannot-duel-yourself: "&cYou cannot send duel request yourself."
@@ -71,6 +71,9 @@ party-gui:
   error-occured: "&cError occured. Please try again. Code: %code"
   invalid-team: "&cInvalid teams! Please try again."
   only-leader-can-do: "&cOnly the party leader can start the Team Fight."
+  error-goToTheLobby: '&cWe cannot do a Team Fight because &6%player &cis not at the Lobby! &eGo back to the Lobby!'
+  error-offline: '&cWe cannot do a Team Fight because &6%player &cis currently offline! &eKick them by typing &a/p kickoffline.'
+  error-must-be-online: '&cAll the party members must be online!'
 perk:
   gui:
     is-maxed: "&aThis perk level is MAXED!"

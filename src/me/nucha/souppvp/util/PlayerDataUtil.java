@@ -22,6 +22,7 @@ public class PlayerDataUtil {
 
 	private static File playerDataFile;
 	private static FileConfiguration playerData;
+	public static FileConfiguration playerDataOld;
 	public static HashMap<String, Object> defaults;
 
 	public static void init(JavaPlugin plugin) {
@@ -34,6 +35,7 @@ public class PlayerDataUtil {
 			}
 		}
 		playerData = YamlConfiguration.loadConfiguration(playerDataFile);
+		playerDataOld = YamlConfiguration.loadConfiguration(new File(plugin.getDataFolder() + "/playerdata-old.yml"));
 		plugin.saveConfig();
 		defaults = new HashMap<>();
 		defaults.put("xp", 0);

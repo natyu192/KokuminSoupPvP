@@ -78,7 +78,7 @@ public class ScoreboardUtils {
 			replaceScore(p, 3, "", "§c君ならやれる", "からがんばれ");
 			replaceScore(p, 2, "", "§cうおおお", "おおおお");
 			replaceScore(p, 1, " ");
-			replaceScore(p, 0, "§akokumin.work");
+			replaceScore(p, 0, "§akokumin.ryukyu");
 		}
 		if (PlayerState.isState(p, PlayerState.IN_LOBBY) || PlayerState.isState(p, PlayerState.IN_FFA)) {
 			replaceScore(p, 9, "", "§7", date);
@@ -90,7 +90,7 @@ public class ScoreboardUtils {
 			replaceScore(p, 3, "", "§7Ping: ", "§6Loading...");
 			replaceScore(p, 2, "", "§7Onlines: ", "§a" + Bukkit.getOnlinePlayers().size());
 			replaceScore(p, 1, " ");
-			replaceScore(p, 0, "§akokumin.work");
+			replaceScore(p, 0, "§akokumin.ryukyu");
 		}
 		if (PlayerState.isState(p, PlayerState.IN_MATCH) || PlayerState.isState(p, PlayerState.SPECTATING_MATCH)) {
 			Match match = MatchManager.getMatch(p);
@@ -111,7 +111,7 @@ public class ScoreboardUtils {
 				}
 			}
 			texts.add(" ");
-			texts.add("§akokumin.work");
+			texts.add("§akokumin.ryukyu");
 			int score = texts.size() + 1;
 			replaceScore(p, score--, "", "§7", date);
 			for (int i = 0; i < texts.size(); i++) {

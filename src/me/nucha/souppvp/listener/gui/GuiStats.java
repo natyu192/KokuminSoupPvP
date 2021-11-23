@@ -18,8 +18,8 @@ import com.google.common.collect.Lists;
 import me.nucha.kokumin.coin.Coin;
 import me.nucha.souppvp.language.LanguageManager;
 import me.nucha.souppvp.listener.SoupListener;
+import me.nucha.souppvp.util.CooldownUtil;
 import me.nucha.souppvp.util.PlayerDataUtil;
-import me.nucha.souppvp.util.cooldown.CooldownUtil;
 
 public class GuiStats implements Listener {
 

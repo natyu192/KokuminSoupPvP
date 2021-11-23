@@ -1,4 +1,4 @@
-package me.nucha.souppvp.util.cooldown;
+package me.nucha.souppvp.util;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -93,6 +93,48 @@ public class CooldownUtil {
 
 	public static HashMap<Player, List<Cooldown>> getCooldownMap() {
 		return cooldown;
+	}
+
+	static class Cooldown {
+
+		private Player player;
+		private Date expire;
+		private String name;
+		private boolean active;
+
+		public Cooldown(Player player, Date expire, String name) {
+			this.player = player;
+			this.expire = expire;
+			this.name = name;
+			this.active = true;
+		}
+
+		public Date getExpire() {
+			return expire;
+		}
+
+		public String getName() {
+			return name;
+		}
+
+		public Player getPlayer() {
+			return player;
+		}
+
+		public boolean isActive() {
+			return active;
+		}
+
+		public void tick() {
+			if (!active) {
+				return;
+			}
+			long now = System.currentTimeMillis();
+			if (now >= expire.getTime()) {
+				active = false;
+			}
+		}
+
 	}
 
 }

@@ -49,6 +49,7 @@ public class NickListener implements PacketListener, Listener {
 		if (packet.getPacket() instanceof PacketPlayOutPlayerInfo) {
 			EnumPlayerInfoAction a = (EnumPlayerInfoAction) packet.getPacketValue("a");
 			if (a.equals(EnumPlayerInfoAction.ADD_PLAYER)) {
+				@SuppressWarnings("unchecked")
 				List<PlayerInfoData> b = (List<PlayerInfoData>) packet.getPacketValue("b");
 				for (PlayerInfoData data : Lists.newArrayList(b)) {
 					String name = data.a().getName();
@@ -65,8 +66,7 @@ public class NickListener implements PacketListener, Listener {
 							profile.getProperties().put("textures", kokuminSkin);
 							PlayerInteractManager piManager = new PlayerInteractManager(wServer);
 							EntityPlayer entityPlayer = new EntityPlayer(server, wServer, profile, piManager);
-							packet.setPacket(
-									new PacketPlayOutPlayerInfo(EnumPlayerInfoAction.ADD_PLAYER, entityPlayer));
+							packet.setPacket(new PacketPlayOutPlayerInfo(EnumPlayerInfoAction.ADD_PLAYER, entityPlayer));
 							return;
 						}
 					}
@@ -77,20 +77,18 @@ public class NickListener implements PacketListener, Listener {
 						profile.getProperties().put("textures", NickManager.getProperties().get(p));
 						PlayerInteractManager piManager = new PlayerInteractManager(wServer);
 						EntityPlayer entityPlayer = new EntityPlayer(server, wServer, profile, piManager);
-						packet.setPacket(
-								new PacketPlayOutPlayerInfo(EnumPlayerInfoAction.ADD_PLAYER, entityPlayer));
+						packet.setPacket(new PacketPlayOutPlayerInfo(EnumPlayerInfoAction.ADD_PLAYER, entityPlayer));
 						return;
 					}
 				}
 			}
 		}
-		/*if (packet.getPacket() instanceof PacketPlayOutNamedEntitySpawn) {
-			UUID id = (UUID) packet.getPacketValue("b");
-			Player p = Bukkit.getPlayer(id);
-			if (p != null && NickManager.isNicked(p)) {
-				Reflection.setValue(packet.getPacket(), "b", UUID.randomUUID());// NickManager.getNickUUID(p));
-			}
-		}*/
+		/*
+		 * if (packet.getPacket() instanceof PacketPlayOutNamedEntitySpawn) { UUID id =
+		 * (UUID) packet.getPacketValue("b"); Player p = Bukkit.getPlayer(id); if (p !=
+		 * null && NickManager.isNicked(p)) { Reflection.setValue(packet.getPacket(),
+		 * "b", UUID.randomUUID());// NickManager.getNickUUID(p)); } }
+		 */
 	}
 
 	@Override

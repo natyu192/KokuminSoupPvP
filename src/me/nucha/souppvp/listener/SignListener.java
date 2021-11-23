@@ -23,10 +23,11 @@ import com.google.common.collect.Lists;
 
 import me.nucha.souppvp.leaderboard.LeaderboardData;
 import me.nucha.souppvp.leaderboard.LeaderboardManager;
+import me.nucha.souppvp.player.PlayerState;
 import me.nucha.souppvp.player.PlayerUtil;
+import me.nucha.souppvp.util.CooldownUtil;
 import me.nucha.souppvp.util.LocationUtil;
 import me.nucha.souppvp.util.PlayerDataUtil;
-import me.nucha.souppvp.util.cooldown.CooldownUtil;
 
 public class SignListener implements Listener {
 
@@ -36,8 +37,7 @@ public class SignListener implements Listener {
 		if (!p.hasPermission("souppvp.sign")) {
 			return;
 		}
-		if (event.getLine(0).equalsIgnoreCase("[soup]") || event.getLine(0).equalsIgnoreCase("[soup]") ||
-				event.getLine(0).equalsIgnoreCase("[soup]")) {
+		if (event.getLine(0).equalsIgnoreCase("[soup]") || event.getLine(0).equalsIgnoreCase("[soup]") || event.getLine(0).equalsIgnoreCase("[soup]")) {
 			event.setLine(0, "§6§lSoupPvP");
 			String line2 = event.getLine(1);
 			if (line2.equalsIgnoreCase("soup")) {
@@ -109,7 +109,9 @@ public class SignListener implements Listener {
 						Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "soup " + p.getName());
 					}
 					if (s.getLine(1).equalsIgnoreCase("§bスポーンに戻る")) {
-						if (LocationUtil.isSet("lobby")) {
+						if (PlayerState.isState(p, PlayerState.LAVA_CHALLENGE)) {
+							PlayerUtil.leaveLavaChallenge(p);
+						} else if (LocationUtil.isSet("lobby")) {
 							p.teleport(LocationUtil.get("lobby"));
 						}
 					}
@@ -117,7 +119,7 @@ public class SignListener implements Listener {
 						PlayerUtil.leaveFFA(p);
 					}
 					if (s.getLine(1).equalsIgnoreCase("§bFFAに入る")) {
-						PlayerUtil.leaveFFA(p);
+						PlayerUtil.joinFFA(p);
 					}
 					if (s.getLine(1).equalsIgnoreCase("§a§lLeaderboard")) {
 						for (String key : PlayerDataUtil.defaults.keySet()) {
@@ -150,11 +152,11 @@ public class SignListener implements Listener {
 										th = "rd";
 									}
 									if (p.getName().equalsIgnoreCase(entry.getKey())) {
-										texts.add(color + "§l" + i + th + " §2§l- " + color + "§l" + entry.getKey() +
-												" §l§2- §b§l" + score + " " + LeaderboardManager.stringFormat(data.getCategory()));
+										texts.add(color + "§l" + i + th + " §2§l- " + color + "§l" + entry.getKey() + " §l§2- §b§l" + score + " "
+												+ LeaderboardManager.stringFormat(data.getCategory()));
 									} else {
-										texts.add(color + "" + i + th + " §2- " + color + entry.getKey() +
-												" §2- §b" + score + " " + LeaderboardManager.stringFormat(data.getCategory()));
+										texts.add(color + "" + i + th + " §2- " + color + entry.getKey() + " §2- §b" + score + " "
+												+ LeaderboardManager.stringFormat(data.getCategory()));
 									}
 									i++;
 								}

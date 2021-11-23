@@ -22,8 +22,8 @@ import me.nucha.souppvp.animation.PerkUpgradeAnimation;
 import me.nucha.souppvp.language.LanguageManager;
 import me.nucha.souppvp.perk.Perk;
 import me.nucha.souppvp.perk.PerkManager;
+import me.nucha.souppvp.util.CooldownUtil;
 import me.nucha.souppvp.util.PlayerDataUtil;
-import me.nucha.souppvp.util.cooldown.CooldownUtil;
 
 public class GuiShop implements Listener {
 

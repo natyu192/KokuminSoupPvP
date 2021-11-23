@@ -5,6 +5,7 @@ import java.util.Set;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
+import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -114,17 +115,50 @@ public class GuiPartyTeaming implements Listener {
 							return;
 						}
 						Party party = infos.get(p).getParty();
-						for (Player member : party.getMembers()) {
-							if (member != null && !PlayerState.isState(member, PlayerState.IN_LOBBY)) {
-								party.sendMessageToMembers("§6" + member.getName() + " §cさんがロビーにいないため、Party Fightを開始できません！",
-										"§eロビーに戻ってください！！");
+						for (OfflinePlayer member : party.getMembers()) {
+							if (!member.isOnline()) {
+								for (OfflinePlayer member2 : party.getMembers()) {
+									if (member2.isOnline()) {
+										Player member2Player = member2.getPlayer();
+										member2Player.sendMessage(
+												LanguageManager.get(member2Player, "party-gui.error-offline").replaceAll("%player", member.getName()));
+									}
+								}
 								return;
 							}
-							if (!team1.contains(member) && !team2.contains(member)) {
+							if (!PlayerState.isState(member.getPlayer(), PlayerState.IN_LOBBY)) {
+								for (OfflinePlayer member2 : party.getMembers()) {
+									if (member2.isOnline()) {
+										Player member2Player = member2.getPlayer();
+										member2Player
+												.sendMessage(LanguageManager.get(member2Player, "party-gui.error-goToTheLobby").replaceAll("%player",
+														member.getName()));
+										member2Player.sendMessage(PlayerState.getState(member.getPlayer()).name());
+									}
+								}
+								return;
+							}
+							boolean success = false;
+							for (Player p1 : team1) {
+								if (p1.getUniqueId().equals(member.getPlayer().getUniqueId())) {
+									success = true;
+								}
+							}
+							for (Player p2 : team2) {
+								if (p2.getUniqueId().equals(member.getPlayer().getUniqueId())) {
+									success = true;
+								}
+							}
+							if (!success) {
 								p.closeInventory();
 								p.sendMessage(LanguageManager.get(p, "party-gui.invalid-team"));
 								return;
 							}
+							/*if (!team1.contains(member.getPlayer()) && !team2.contains(member.getPlayer())) {
+								p.closeInventory();
+								p.sendMessage(LanguageManager.get(p, "party-gui.invalid-team"));
+								return;
+							}*/
 						}
 						p.closeInventory();
 						MatchManager.createMatch(team1, team2);
@@ -136,10 +170,12 @@ public class GuiPartyTeaming implements Listener {
 
 	@EventHandler
 	public void onLeaveParty(PartyLeaveEvent event) {
-		Player p = event.getPlayer();
+		OfflinePlayer p = event.getPlayer();
 		if (infos.containsKey(p)) {
 			infos.remove(p);
-			p.sendMessage("§6パーティを抜けたためチーム編成は破棄されました");
+			if (p.isOnline()) {
+				p.getPlayer().sendMessage("§6パーティを抜けたためチーム編成は破棄されました");
+			}
 		}
 		for (Player infop : Sets.newHashSet(infos.keySet())) {
 			TeamInfo info = infos.get(infop);

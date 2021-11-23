@@ -9,6 +9,7 @@ import org.bukkit.OfflinePlayer;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 
@@ -243,6 +244,38 @@ public class CommandSoupPvP implements CommandExecutor {
 				});
 				return true;
 			}
+			if (args[0].equalsIgnoreCase("restorestats")) {
+				Bukkit.getScheduler().runTaskAsynchronously(SoupPvPPlugin.getInstance(), new BukkitRunnable() {
+					@Override
+					public void run() {
+						if (resetStatsConfirm.containsKey(sender.getName())) {
+							OfflinePlayer target = resetStatsConfirm.get(sender.getName());
+							String targetName = target.getName();
+							if (targetName.equalsIgnoreCase(args[1])) {
+								ConfigurationSection stats = PlayerDataUtil.playerDataOld.getConfigurationSection(target.getUniqueId().toString());
+								for (String category : PlayerDataUtil.defaults.keySet()) {
+									PlayerDataUtil.set(target, category, stats.get(category));
+								}
+								sender.sendMessage("§c§l" + target.getName() + " §eのStatsを復元しました！！");
+							} else {
+								sender.sendMessage("§6" + targetName + " のStatsの復元をキャンセルしました！");
+							}
+							resetStatsConfirm.remove(sender.getName());
+							return;
+						}
+						OfflinePlayer target = Bukkit.getOfflinePlayer(args[1]);
+						if (target == null || !target.hasPlayedBefore()) {
+							sender.sendMessage("§6" + args[1] + " §cはこのサーバーにログインしたことがありません");
+							return;
+						}
+						String targetName = target.getName();
+						sender.sendMessage("§6§l本当に §4§l" + targetName + " §c§lのStatsを復元しますか？");
+						sender.sendMessage("§e§l復元する場合、もう一度同じコマンドを入力してください！！");
+						resetStatsConfirm.put(sender.getName(), target);
+					}
+				});
+				return true;
+			}
 		}
 		if (args.length == 3) {
 			if (args[0].equalsIgnoreCase("loc")) {
@@ -277,6 +310,7 @@ public class CommandSoupPvP implements CommandExecutor {
 		sender.sendMessage("§e/souppvp resetstats <player> §6--- §e<player>のStatsをリセットします");
 		sender.sendMessage("§e/souppvp leaderboard §6--- §eLeaderboardを更新します(ラグが起きる可能性あり)");
 		sender.sendMessage("§e/souppvp reload §6--- §econfigを再読み込みします");
+		sender.sendMessage("§e/souppvp restorestats <player> §6--- §e<player>のStatsを復元します");
 		return true;
 	}
 

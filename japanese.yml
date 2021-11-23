@@ -1,86 +1,89 @@
-bar: "&6&l------------------------------"
-space: ""
-cooldown: "&c%cooldown•bŒã‚ÉÄ“xÀs‰Â”\‚Å‚·"
-not-enough-coin: "&6%coin &cƒRƒCƒ“‘«‚è‚Ü‚¹‚ñI"
-coming-soon: "&6‚¨Šy‚µ‚İ‚ÉI"
+bar: '&6&l------------------------------'
+space: ''
+cooldown: '&c%cooldownç§’å¾Œã«å†åº¦å®Ÿè¡Œå¯èƒ½ã§ã™'
+not-enough-coin: '&6%coin &cã‚³ã‚¤ãƒ³è¶³ã‚Šã¾ã›ã‚“ï¼'
+coming-soon: '&6ãŠæ¥½ã—ã¿ã«ï¼'
 arena-fight:
   duel:
-    send: "&e%target ‚Ö1vs1‚ğ\‚µ‚İ‚Ü‚µ‚½I"
-    receive: "&e%sender ‚©‚ç1vs1‚ğ\‚µ‚Ü‚ê‚Ü‚µ‚½I"
-    click-here: "&d&n[‚±‚¿‚ç‚ğƒNƒŠƒbƒN]"
-    to-accept: "&e‚·‚é‚Æ’§í‚ğó‚¯AƒQ[ƒ€‚ğn‚ß‚Ü‚·"
-    accepted: "&a%sender ‚©‚ç‚ÌDuel‚ğó‚¯‚Ü‚µ‚½I"
-    was-accepted: "&a%accepter ‚ª‚ ‚È‚½‚©‚ç‚ÌDuel‚ğó‚¯‚Ü‚µ‚½I"
+    send: '&e%target ã¸1vs1ã‚’ç”³ã—è¾¼ã¿ã¾ã—ãŸï¼'
+    receive: '&e%sender ã‹ã‚‰1vs1ã‚’ç”³ã—è¾¼ã¾ã‚Œã¾ã—ãŸï¼'
+    click-here: '&d&n[ã“ã¡ã‚‰ã‚’ã‚¯ãƒªãƒƒã‚¯]'
+    to-accept: '&eã™ã‚‹ã¨æŒ‘æˆ¦ã‚’å—ã‘ã€ã‚²ãƒ¼ãƒ ã‚’å§‹ã‚ã¾ã™'
+    accepted: '&a%sender ã‹ã‚‰ã®Duelã‚’å—ã‘ã¾ã—ãŸï¼'
+    was-accepted: '&a%accepter ãŒã‚ãªãŸã‹ã‚‰ã®Duelã‚’å—ã‘ã¾ã—ãŸï¼'
   match:
-    starting-in: "&eƒQ[ƒ€‚ªn‚Ü‚é‚Ü‚Å &6%count &e•b..."
-    started: "&aƒQ[ƒ€ŠJnI"
-    ended: "&e&lƒQ[ƒ€I—¹I"
-    no-arena: "&c—V‚Ô‚±‚Æ‚Ì‚Å‚«‚éƒAƒŠ[ƒi‚ªŒ©‚Â‚©‚è‚Ü‚¹‚ñ‚Å‚µ‚½"
-    opponent-found: "&a‘Îí‘Šè‚ªŒ©‚Â‚©‚è‚Ü‚µ‚½I ‘Šè: %opponent"
+    starting-in: '&eã‚²ãƒ¼ãƒ ãŒå§‹ã¾ã‚‹ã¾ã§ &6%count &eç§’...'
+    started: '&aã‚²ãƒ¼ãƒ é–‹å§‹ï¼'
+    ended: '&e&lã‚²ãƒ¼ãƒ çµ‚äº†ï¼'
+    no-arena: '&céŠã¶ã“ã¨ã®ã§ãã‚‹ã‚¢ãƒªãƒ¼ãƒŠãŒè¦‹ã¤ã‹ã‚Šã¾ã›ã‚“ã§ã—ãŸ'
+    opponent-found: '&aå¯¾æˆ¦ç›¸æ‰‹ãŒè¦‹ã¤ã‹ã‚Šã¾ã—ãŸï¼ ç›¸æ‰‹: %opponent'
   spectate:
-    watch-your-own-game: "&a©•ª‚ÌƒQ[ƒ€‚ÍŠÏí‚µ‚Ü‚µ‚å‚¤I"
+    watch-your-own-game: '&aè‡ªåˆ†ã®ã‚²ãƒ¼ãƒ ã¯è¦³æˆ¦ã—ã¾ã—ã‚‡ã†ï¼'
 command:
   error:
-    player-not-found: "&6%player &c‚Æ‚¢‚¤ƒvƒŒƒCƒ„[‚ÍƒIƒtƒ‰ƒCƒ“‚Å‚·"
-    cannot-do-while-in-party: "&cƒp[ƒeƒB‚É“ü‚Á‚Ä‚¢‚éŠÔ‚Íg—p‚Å‚«‚Ü‚¹‚ñ"
-    must-be-in-party: "&cƒp[ƒeƒB‚É“ü‚Á‚Ä‚¢‚È‚¯‚ê‚Îg—p‚Å‚«‚Ü‚¹‚ñ"
-    can-do-in-lobby: "&cƒƒr[‚Å‚Ì‚İÀs‰Â”\‚Å‚·"
-    can-do-in-lobby-or-ffa: "&cƒƒr[AFFA‚Å‚Ì‚İÀs‰Â”\‚Å‚·"
-    target-must-be-in-lobby: "&6%target &c‚Íƒƒr[‚É‚¢‚È‚¯‚ê‚Î‚È‚è‚Ü‚¹‚ñ"
-    target-must-not-be-in-party: "&6%target &c‚Íƒp[ƒeƒB‚©‚ç”²‚¯‚Ä‚¢‚È‚¯‚ê‚Î‚È‚è‚Ü‚¹‚ñ"
-    combat-tagged: "&c‚ ‚È‚½‚É‚ÍCombatTag‚ª‚Â‚¢‚Ä‚¢‚Ü‚· &7(c‚è%tag•b)"
-    target-not-in-match: "&6%target &c‚ÍƒQ[ƒ€’†‚Å‚Í‚ ‚è‚Ü‚¹‚ñ"
+    player-not-found: '&6%player &cã¨ã„ã†ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã¯ã‚ªãƒ•ãƒ©ã‚¤ãƒ³ã§ã™'
+    cannot-do-while-in-party: '&cãƒ‘ãƒ¼ãƒ†ã‚£ã«å…¥ã£ã¦ã„ã‚‹é–“ã¯ä½¿ç”¨ã§ãã¾ã›ã‚“'
+    must-be-in-party: '&cãƒ‘ãƒ¼ãƒ†ã‚£ã«å…¥ã£ã¦ã„ãªã‘ã‚Œã°ä½¿ç”¨ã§ãã¾ã›ã‚“'
+    can-do-in-lobby: '&cãƒ­ãƒ“ãƒ¼ã§ã®ã¿å®Ÿè¡Œå¯èƒ½ã§ã™'
+    can-do-in-lobby-or-ffa: '&cãƒ­ãƒ“ãƒ¼ã€FFAã§ã®ã¿å®Ÿè¡Œå¯èƒ½ã§ã™'
+    target-must-be-in-lobby: '&6%target &cã¯ãƒ­ãƒ“ãƒ¼ã«ã„ãªã‘ã‚Œã°ãªã‚Šã¾ã›ã‚“'
+    target-must-not-be-in-party: '&6%target &cã¯ãƒ‘ãƒ¼ãƒ†ã‚£ã‹ã‚‰æŠœã‘ã¦ã„ãªã‘ã‚Œã°ãªã‚Šã¾ã›ã‚“'
+    combat-tagged: '&cã‚ãªãŸã«ã¯Combat TagãŒã¤ã„ã¦ã„ã¾ã™ &7(æ®‹ã‚Š&c%tag&7ç§’)'
+    target-not-in-match: '&6%target &cã¯ã‚²ãƒ¼ãƒ ä¸­ã§ã¯ã‚ã‚Šã¾ã›ã‚“'
   duel:
-    cannot-duel-yourself: "&c©•ª©g‚Ö1vs1‚ğ\‚µ‚Ş‚±‚Æ‚Í‚Å‚«‚Ü‚¹‚ñ"
-    already-pending-duel: "&c‚ ‚È‚½‚ÍŠù‚É &6%target &c‚Ö1vs1‚ğ\‚µ‚ñ‚Å‚¢‚Ü‚·I"
-    usage: "&cg‚¢•û: /duel <player> --- &61vs1‚ğ\‚µ‚İ‚Ü‚·"
+    cannot-duel-yourself: '&cè‡ªåˆ†è‡ªèº«ã¸1vs1ã‚’ç”³ã—è¾¼ã‚€ã“ã¨ã¯ã§ãã¾ã›ã‚“'
+    already-pending-duel: '&cã‚ãªãŸã¯æ—¢ã« &6%target &cã¸1vs1ã‚’ç”³ã—è¾¼ã‚“ã§ã„ã¾ã™ï¼'
+    usage: '&cä½¿ã„æ–¹: /duel <player> --- &61vs1ã‚’ç”³ã—è¾¼ã¿ã¾ã™'
   accept:
-    no-duel-request: "&6%target ‚©‚ç1vs1‚Ì\‚µ‚İ‚ğó‚¯‚Ä‚¢‚Ü‚¹‚ñ"
-    usage: "&cg‚¢•û: /accept <player> --- &61vs1‚ğó‚¯‚Ü‚·"
+    no-duel-request: '&6%target ã‹ã‚‰1vs1ã®ç”³ã—è¾¼ã¿ã‚’å—ã‘ã¦ã„ã¾ã›ã‚“'
+    usage: '&cä½¿ã„æ–¹: /accept <player> --- &61vs1ã‚’å—ã‘ã¾ã™'
   nick:
-    length-error: "&cƒjƒbƒNƒl[ƒ€‚Í4•¶šˆÈãA16•¶šˆÈ“à‚ÌID‚Å‚È‚¯‚ê‚Î‚È‚è‚Ü‚¹‚ñ"
-    name-is-already-used: "&6%name &c‚Æ‚¢‚¤ƒjƒbƒNƒl[ƒ€‚ÍŠù‚Ég—p‚³‚ê‚Ä‚¢‚Ü‚·"
-    not-nicked: "˜cNick‚ğg—p‚µ‚Ä‚¢‚Ü‚¹‚ñ"
+    length-error: '&cãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ ã¯4æ–‡å­—ä»¥ä¸Šã€16æ–‡å­—ä»¥å†…ã®IDã§ãªã‘ã‚Œã°ãªã‚Šã¾ã›ã‚“'
+    name-is-already-used: '&6%name &cã¨ã„ã†ãƒ‹ãƒƒã‚¯ãƒãƒ¼ãƒ ã¯æ—¢ã«ä½¿ç”¨ã•ã‚Œã¦ã„ã¾ã™'
+    not-nicked: 'Â§cNickã‚’ä½¿ç”¨ã—ã¦ã„ã¾ã›ã‚“'
   spectate:
-    cannot-spec-yourself: "&c©•ª©g‚ÌƒQ[ƒ€‚ğŠÏí‚·‚é‚±‚Æ‚Í‚Å‚«‚Ü‚¹‚ñ"
-    usage: "&cg‚¢•û: /spec <player> --- &6Arena Fight‚É‚¢‚éƒvƒŒƒCƒ„[‚ğŠÏí‚µ‚Ü‚·"
+    cannot-spec-yourself: '&cè‡ªåˆ†è‡ªèº«ã®ã‚²ãƒ¼ãƒ ã‚’è¦³æˆ¦ã™ã‚‹ã“ã¨ã¯ã§ãã¾ã›ã‚“'
+    usage: '&cä½¿ã„æ–¹: /spec <player> --- &6Arena Fightã«ã„ã‚‹ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚’è¦³æˆ¦ã—ã¾ã™'
   language:
-    usage: "&cg‚¢•û: /language <Œ¾Œê> --- &6Œ¾Œê‚ğİ’è‚µ‚Ü‚·"
-    set: "Œ»İ‚ÌŒ¾Œê: %language"
+    usage: '&cä½¿ã„æ–¹: /language <è¨€èª> --- &6è¨€èªã‚’è¨­å®šã—ã¾ã™'
+    set: 'ç¾åœ¨ã®è¨€èª: %language'
 kit:
   gui:
-    unable-kit: "&cŒ»İ %kit Kit ‚Íg—p‚Å‚«‚Ü‚¹‚ñ(’²®’†‚È‚Ç)"
-    go-ffa-first: "&6‚Ü‚¸‚ÍFFA‚És‚«‚Ü‚µ‚å‚¤I"
-    kit-selected: "&a%kit Kit ‚ğ‘I‘ğ‚µ‚Ü‚µ‚½"
-    kit-could-not-select: "&cƒGƒ‰[: %kit Kit ‚ğ‘I‘ğ‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚¹‚ñ‚Å‚µ‚½"
-    purchasing-kit: "%kit Kit ‚Ìw“ü"
-    kit-unlock-broadcast: "%player &b‚ª &d%kit Kit &b‚ğƒAƒ“ƒƒbƒN‚µ‚½I"
+    unable-kit: '&cç¾åœ¨ %kit Kit ã¯ä½¿ç”¨ã§ãã¾ã›ã‚“(èª¿æ•´ä¸­ãªã©)'
+    go-ffa-first: '&6ã¾ãšã¯FFAã«è¡Œãã¾ã—ã‚‡ã†ï¼'
+    kit-selected: '&a%kit Kit ã‚’é¸æŠã—ã¾ã—ãŸ'
+    kit-could-not-select: '&cã‚¨ãƒ©ãƒ¼: %kit Kit ã‚’é¸æŠã™ã‚‹ã“ã¨ãŒã§ãã¾ã›ã‚“ã§ã—ãŸ'
+    purchasing-kit: '%kit Kit ã®è³¼å…¥'
+    kit-unlock-broadcast: '%player &bãŒ &d%kit Kit &bã‚’ã‚¢ãƒ³ãƒ­ãƒƒã‚¯ã—ãŸï¼'
   sumo-wrestler:
-    only-fists: "&c‚±‚ÌƒLƒbƒg‚Å‚Í‘fè‚Å‚Ì‚İƒ_ƒ[ƒW‚ª—^‚¦‚ç‚ê‚Ü‚·I"
+    only-fists: '&cã“ã®ã‚­ãƒƒãƒˆã§ã¯ç´ æ‰‹ã§ã®ã¿ãƒ€ãƒ¡ãƒ¼ã‚¸ãŒä¸ãˆã‚‰ã‚Œã¾ã™ï¼'
 combat:
-  be-killed: "&c%victim&7‚Í&c%killer&7‚É“|‚³‚ê‚½"
-  died: "&c%victim&7‚Í€‚ñ‚Å‚µ‚Ü‚Á‚½"
+  be-killed: '&c%victim&7ã¯&c%killer&7ã«å€’ã•ã‚ŒãŸ'
+  died: '&c%victim&7ã¯æ­»ã‚“ã§ã—ã¾ã£ãŸ'
 ffa:
-  select-kit-to-get-out: "&cƒLƒbƒg‚ğ‘I‚Î‚È‚¯‚ê‚ÎFFA‚Éo‚é‚±‚Æ‚Í‚Å‚«‚Ü‚¹‚ñ"
-  build-limit: "&cƒuƒƒbƒN‚Í Y%limit ‚Ü‚Å‚É§ŒÀ‚³‚ê‚Ä‚¢‚Ü‚·"
-  daily-soup-completed: "&bƒfƒCƒŠ[ƒX[ƒvXP‚ª–ƒ^ƒ“‚É‚È‚è‚Ü‚µ‚½I"
-  earn-resource: "&d%resource&a‚ğ&d%amount&aŒÂ‰ñû‚µ‚½I"
+  select-kit-to-get-out: '&cã‚­ãƒƒãƒˆã‚’é¸ã°ãªã‘ã‚Œã°FFAã«å‡ºã‚‹ã“ã¨ã¯ã§ãã¾ã›ã‚“'
+  build-limit: '&cãƒ–ãƒ­ãƒƒã‚¯ã¯ Y%limit ã¾ã§ã«åˆ¶é™ã•ã‚Œã¦ã„ã¾ã™'
+  daily-soup-completed: '&bãƒ‡ã‚¤ãƒªãƒ¼ã‚¹ãƒ¼ãƒ—XPãŒæº€ã‚¿ãƒ³ã«ãªã‚Šã¾ã—ãŸï¼'
+  earn-resource: '&d%resource&aã‚’&d%amount&aå€‹å›åã—ãŸï¼'
 party-gui:
-  random-team: "&aƒ‰ƒ“ƒ_ƒ€‚Åƒ`[ƒ€•ª‚¯‚µ‚Ü‚µ‚½"
-  member-size-error: "&c—¼•û‚Ìƒ`[ƒ€‚É‚Í‚PlˆÈã‚¢‚é•K—v‚ª‚ ‚è‚Ü‚·"
-  error-occured: "&cƒGƒ‰[‚ª”­¶‚µ‚½‚½‚ß‚â‚è’¼‚µ‚Ä‚­‚¾‚³‚¢: %code"
-  invalid-team: "&c•s³‚Èƒ`[ƒ€‚Ì‚½‚ß‚â‚è’¼‚µ‚Ä‚­‚¾‚³‚¢"
-  only-leader-can-do: "&cƒp[ƒeƒB‚ÌƒŠ[ƒ_[‚Ì‚İParty Fight‚ğn‚ß‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·"
+  random-team: '&aãƒ©ãƒ³ãƒ€ãƒ ã§ãƒãƒ¼ãƒ åˆ†ã‘ã—ã¾ã—ãŸ'
+  member-size-error: '&cä¸¡æ–¹ã®ãƒãƒ¼ãƒ ã«ã¯ï¼‘äººä»¥ä¸Šã„ã‚‹å¿…è¦ãŒã‚ã‚Šã¾ã™'
+  error-occured: '&cã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿã—ãŸãŸã‚ã‚„ã‚Šç›´ã—ã¦ãã ã•ã„: %code'
+  invalid-team: '&cä¸æ­£ãªãƒãƒ¼ãƒ ã®ãŸã‚ã‚„ã‚Šç›´ã—ã¦ãã ã•ã„'
+  only-leader-can-do: '&cãƒ‘ãƒ¼ãƒ†ã‚£ã®ãƒªãƒ¼ãƒ€ãƒ¼ã®ã¿Party Fightã‚’å§‹ã‚ã‚‹ã“ã¨ãŒã§ãã¾ã™'
+  error-offline: '&6%player&cã•ã‚“ãŒãƒ­ãƒ“ãƒ¼ã«ã„ãªã„ãŸã‚ã€ãƒãƒ¼ãƒ æˆ¦ã‚’é–‹å§‹ã§ãã¾ã›ã‚“ï¼&a/p kickoffline &eã¨æ‰“ã¤ã“ã¨ã§ã‚­ãƒƒã‚¯ã™ã‚‹ã“ã¨ãŒã§ãã¾ã™'
+  error-goToTheLobby: '&6%player&cã•ã‚“ãŒãƒ­ãƒ“ãƒ¼ã«ã„ãªã„ãŸã‚ã€ãƒãƒ¼ãƒ æˆ¦ã‚’é–‹å§‹ã§ãã¾ã›ã‚“ï¼&eãƒ­ãƒ“ãƒ¼ã«æˆ»ã£ã¦ãã ã•ã„ï¼'
+  error-must-be-online: '&cãƒ‘ãƒ¼ãƒ†ã‚£ãƒ¡ãƒ³ãƒãƒ¼å…¨å“¡ãŒã‚ªãƒ³ãƒ©ã‚¤ãƒ³ã§ã‚ã‚‹å¿…è¦ãŒã‚ã‚Šã¾ã™ï¼'
 perk:
   gui:
-    is-maxed: "&a‚±‚ÌPerk‚ÌƒŒƒxƒ‹‚ÍÅ‘å‚Å‚·I"
-    upgrading-perk: "%perk ‚ÌƒAƒbƒvƒOƒŒ[ƒh"
-    max-unlocked: "%player &e‚ª &d%perk &b‚ÌÅ‘åƒŒƒxƒ‹‚ğƒAƒ“ƒƒbƒN‚µ‚½I"
+    is-maxed: '&aã“ã®Perkã®ãƒ¬ãƒ™ãƒ«ã¯æœ€å¤§ã§ã™ï¼'
+    upgrading-perk: '%perk ã®ã‚¢ãƒƒãƒ—ã‚°ãƒ¬ãƒ¼ãƒ‰'
+    max-unlocked: '%player &eãŒ &d%perk &bã®æœ€å¤§ãƒ¬ãƒ™ãƒ«ã‚’ã‚¢ãƒ³ãƒ­ãƒƒã‚¯ã—ãŸï¼'
 queue:
-  remove: "&7ƒLƒ…[‚©‚ç”²‚¯‚Ü‚µ‚½"
-  join: "&7ƒLƒ…[‚É“ü‚è‚Ü‚µ‚½B‘Îí‘Šè‚ªŒ©‚Â‚©‚é‚Ü‚Å‚µ‚Î‚ç‚­‚¨‘Ò‚¿‚­‚¾‚³‚¢..."
-  remove-for-being-in-party: "&7Party‚É“ü‚Á‚½‚½‚ßƒLƒ…[‚©‚ç”²‚¯‚Ü‚µ‚½"
+  remove: '&7ã‚­ãƒ¥ãƒ¼ã‹ã‚‰æŠœã‘ã¾ã—ãŸ'
+  join: '&7ã‚­ãƒ¥ãƒ¼ã«å…¥ã‚Šã¾ã—ãŸã€‚å¯¾æˆ¦ç›¸æ‰‹ãŒè¦‹ã¤ã‹ã‚‹ã¾ã§ã—ã°ã‚‰ããŠå¾…ã¡ãã ã•ã„...'
+  remove-for-being-in-party: '&7Partyã«å…¥ã£ãŸãŸã‚ã‚­ãƒ¥ãƒ¼ã‹ã‚‰æŠœã‘ã¾ã—ãŸ'
 lava-challenge:
-  succeed: "&cLava Challenge&a‚ğƒNƒŠƒA‚µ‚½I"
-  succeed-broadcast: "&d%player &a‚ª &cLava Challenge &a‚ğƒNƒŠƒA‚µ‚½I"
-  addcoin-message: "Lava Challenge ‚É¬Œ÷"
+  succeed: '&cLava Challenge&aã‚’ã‚¯ãƒªã‚¢ã—ãŸï¼'
+  succeed-broadcast: '&d%player &aãŒ &cLava Challenge &aã‚’ã‚¯ãƒªã‚¢ã—ãŸï¼'
+  addcoin-message: 'Lava Challenge ã«æˆåŠŸ'

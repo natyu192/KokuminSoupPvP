@@ -1,7 +1,6 @@
 package me.nucha.souppvp.listener.gui;
 
-import java.util.Collections;
-import java.util.List;
+import java.util.ArrayList;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -9,8 +8,6 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
-
-import com.google.common.collect.Lists;
 
 import me.nucha.kokumin.kabu.GuiKabu;
 import me.nucha.parties.Party;
@@ -90,7 +87,7 @@ public class ItemClickListener implements Listener {
 						p.sendMessage("§8[§aMatch§8] §r" + LanguageManager.get(p, "party-gui.only-leader-can-do"));
 						return;
 					}
-					List<Player> members = Lists.newArrayList(party.getMembers());
+					/*List<Player> members = Lists.newArrayList(party.getMembers());
 					Collections.shuffle(members);
 					List<Player> team1 = Lists.newArrayList();
 					List<Player> team2 = Lists.newArrayList();
@@ -100,8 +97,14 @@ public class ItemClickListener implements Listener {
 						} else {
 							team2.add(members.get(i));
 						}
+					}*/
+					TeamInfo teamInfo = new TeamInfo(party, new ArrayList<>(), new ArrayList<>());
+					boolean success = teamInfo.randomize();
+					if (success) {
+						GuiPartyTeaming.open(p, teamInfo);
+					} else {
+						p.sendMessage(LanguageManager.get(p, "party-gui.error-must-be-online"));
 					}
-					GuiPartyTeaming.open(p, new TeamInfo(party, team1, team2));
 				}
 				if (displayName.startsWith("§3観戦をやめる")) {
 					if (PlayerState.isState(p, PlayerState.SPECTATING_MATCH)) {

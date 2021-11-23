@@ -21,8 +21,8 @@ import me.nucha.souppvp.kit.KitManager;
 import me.nucha.souppvp.language.LanguageManager;
 import me.nucha.souppvp.listener.combattag.CombatTagListener;
 import me.nucha.souppvp.player.PlayerState;
+import me.nucha.souppvp.util.CooldownUtil;
 import me.nucha.souppvp.util.PlayerDataUtil;
-import me.nucha.souppvp.util.cooldown.CooldownUtil;
 
 public class GuiKits implements Listener {
 

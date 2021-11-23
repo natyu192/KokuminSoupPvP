@@ -12,7 +12,7 @@ import me.nucha.souppvp.language.LanguageManager;
 import me.nucha.souppvp.nick.NickGenerator;
 import me.nucha.souppvp.nick.NickManager;
 import me.nucha.souppvp.player.PlayerState;
-import me.nucha.souppvp.util.cooldown.CooldownUtil;
+import me.nucha.souppvp.util.CooldownUtil;
 
 public class CommandNick implements CommandExecutor {
 

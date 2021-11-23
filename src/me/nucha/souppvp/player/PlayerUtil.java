@@ -125,7 +125,9 @@ public class PlayerUtil {
 		p.getInventory().setItem(3, item_kabu.clone());
 		p.getInventory().setItem(5, MatchManager.isQueued(p) ? item_arenafight_queued.clone() : item_arenafight.clone());
 		p.getInventory().setItem(6, item_partyfight.clone());
-		p.getInventory().setItem(7, item_lava_challenge.clone());
+		if (LocationUtil.isSet("lava-challenge")) {
+			p.getInventory().setItem(7, item_lava_challenge.clone());
+		}
 	}
 
 	public static void giveSpectatorItems(Player p) {
