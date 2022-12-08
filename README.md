@@ -1,3 +1,3 @@
 # KokuminSoupPvP
-ほとんど国民サバで使われていたままでアップロードされています
-使い方はWikiを参照してください
+マインクラフトのBukkitサーバー用のミニゲームプラグインです。<br>
+使い方は[Wiki](https://github.com/natyu192/KokuminSoupPvP/wiki)を参照してください
